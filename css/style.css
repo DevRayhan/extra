@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.container{
+    width: 90%;
+    margin: auto;
+}
+img{
+    max-width: 100%;
+}
+/* header section start */
+.headerSection{
+    background-image: url("../image/ad61282e7a14711b8a50ad2f91e3c38c.jpg");
+    background-position: top ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 87vh;
+    position: relative;
+    z-index: 1;
+}
+.headerSection::before{
+    content: "";
+    position: absolute;
+    background-color: #000000c5;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    z-index: -1;
+}
+.logo-menu{
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+    width: 127px;
+}
+.menu > ul{
+    display: flex;
+    transition: 1s;
+}
+.menu ul li{
+    list-style: none;
+    position: relative;
+}
+.menu ul li a {
+    text-decoration: none;
+    padding: 11px 13px;
+    color: white;
+    display: block;
+    font-size: 19px;
+}
+.menu ul li a:hover{
+    color: hotpink;
+}
+/* dropdown start */
+.dropdown{
+    width: 137px;
+    position: absolute;
+    top: 100%;
+    bottom: 0;
+    text-align: center;
+    transform: scaleY(0);
+    transition: 1s;
+    visibility: hidden;
+    opacity: 0;
+}
+.dropdown  li{
+    display: block;
+}
+.dropdown  li  a{
+    display: block;
+}
+.menu ul li:hover .dropdown{
+    transform: scaleY(1);
+    visibility: visible;
+    opacity: 1;
+    
+}
+.hero-area {
+    color: white;
+    width: 37%;
+    top: 117px;
+    position: relative;
+}
+.hero-area h1 {
+    font-size: 57px;
+    padding: 13px 0;
+}
+.hero-area a {
+    font-size: 23px;
+    margin: 23px 0;
+    display: block;
+    color: #6727e5;
+}
+.hero-social ul{
+    display: flex;
+}
+.hero-social ul li{
+    list-style: none;
+    display:block;
+    height: 37px;
+    width: 37px;
+    line-height: 37px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 50px;
+    margin: 11px;
+    transform: translate(0);
+    transition: .5s;
+}
+.hero-social ul li:hover{
+    transform: translate(11px);
+    background-color: azure;
+    color: black;
+}
