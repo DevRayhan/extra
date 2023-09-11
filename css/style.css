@@ -45,6 +45,29 @@ img{
     list-style: none;
     position: relative;
 }
+.menu > ul> li:first-child a{
+    color: hotpink;
+}
+.menu > ul > li::after{
+    content: "";
+    background-color: hotpink;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    visibility: hidden;
+    transition: .5s;
+    opacity: 0;
+    transform: scaleY(0);
+}
+.menu > ul > li:hover::after{
+    visibility: visible;
+    opacity: 1;
+    transform: scaleY(1);
+    width: 100%;
+}
+ 
 .menu ul li a {
     text-decoration: none;
     padding: 11px 13px;
@@ -85,15 +108,20 @@ img{
     top: 117px;
     position: relative;
 }
+.hero-area h5 {
+    letter-spacing: 3px;
+    word-spacing: 11px;
+    color: yellowgreen;
+}
 .hero-area h1 {
     font-size: 57px;
     padding: 13px 0;
 }
 .hero-area a {
-    font-size: 23px;
+    font-size: 21px;
     margin: 23px 0;
     display: block;
-    color: #6727e5;
+    color: #6627e5b9;
 }
 .hero-social ul{
     display: flex;
